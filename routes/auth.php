@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -56,4 +57,12 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    Route::resource('categories', CategoryController::class);
+    // Route::get('categories', [CategoryController::class, 'index'])->name('categories.index');
+    // Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
+    // Route::post('categories/create', [CategoryController::class, 'store'])->name('categories.store');
+    // Route::get('categories/edit', [CategoryController::class, 'store'])->name('categories.edit');
+    // Route::post('categories/edit', [CategoryController::class, 'update'])->name('categories.update');
+
 });
