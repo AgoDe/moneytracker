@@ -34,9 +34,6 @@ const getColor = (color) => {
                                 Categoria
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Budget mensile
-                            </th>
-                            <th scope="col" class="px-6 py-3">
                                 Colore
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -51,11 +48,8 @@ const getColor = (color) => {
                         :key="category.id"
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                {{ category.name }}
+                                {{ category.title }}
                             </th>
-                            <td class="px-6 py-4">
-                                € {{ category.monthly_budget }}
-                            </td>
                             <td class="px-6 py-4">
 
                                 <div :class="getColor(category.color)">

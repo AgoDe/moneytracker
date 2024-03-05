@@ -9,10 +9,8 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
 import Inputs from './_Form.vue';
 
 const form = useForm({
-    name: '',
-    color: '',
-    icon: '',
-    monthly_budget: 0,
+    title: '',
+    color: '#ffffff',
 });
 
 const submit = () => {
@@ -32,61 +30,6 @@ const submit = () => {
 
             <form @submit.prevent="submit">
                 <inputs :form="form"></inputs>
-                
-                <!-- <div>
-                    <InputLabel for="name" value="Nome" />
-
-                    <TextInput
-                        id="name"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.name"
-                        required
-                        autofocus
-                        autocomplete="name"
-                    />
-
-                    <InputError class="mt-2" :message="form.errors.name" />
-                </div>
-
-                <div class="mt-4">
-                    <InputLabel for="color" value="Colore" />
-
-                    <TextInput
-                        type="color"
-                        id="color"
-                        class="mt-1 block w-full"
-                        v-model="form.color"
-                    />
-
-                    <InputError class="mt-2" :message="form.errors.color" />
-                </div>
-
-                <div class="mt-4">
-                    <InputLabel for="icon" value="Icona" />
-
-                    <TextInput
-                        id="icon"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.icon"
-                    />
-
-                    <InputError class="mt-2" :message="form.errors.icon" />
-                </div>
-
-                <div class="mt-4">
-                    <InputLabel for="monthly_budget" value="Budget mensile" />
-
-                    <TextInput
-                        id="monthly_budget"
-                        type="number"
-                        class="mt-1 block w-full"
-                        v-model="form.monthly_budget"
-                    />
-
-                    <InputError class="mt-2" :message="form.errors.monthly_budget" />
-                </div> -->
 
                 <div class="flex items-center justify-end mt-4">
 

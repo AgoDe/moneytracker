@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\TransactionType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,12 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
-            'name' => 'Agostino',
-            'email' => 'user@example.com',
-            'password' => 'Password',
+        $this->call([
+            UserSeeder::class,
+            TransactionTypeSeeder::class,
+            CategorySeeder::class,
+            SubcategorySeeder::class,
         ]);
-
-        Category::factory(5)->create();
+        
+        //Category::factory(5)->create();
     }
 }

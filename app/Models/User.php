@@ -48,4 +48,20 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    /* Relations */
+
+    public function accounts()
+    {
+        return $this->hasMany(Account::class);
+    }
+
+    public function transactions()
+    {
+        return $this->with([
+            'accounts.transactions'
+        ])->get();
+    }
 }
+
+

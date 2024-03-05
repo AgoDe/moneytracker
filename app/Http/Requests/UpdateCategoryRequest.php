@@ -23,10 +23,8 @@ class UpdateCategoryRequest extends FormRequest
     {
         return [
             'id' => 'required|exists:categories,id',    
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'color' => 'hex_color',
-            //'icon' => 'string|max:255',
-            'monthly_budget' => 'integer',
         ];
     }
 }

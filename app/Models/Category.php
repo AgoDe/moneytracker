@@ -11,11 +11,19 @@ class Category extends Model
 
      protected $guarded = [];
 
-    public function setNameAttribute($value)
+    public function setTitleAttribute($value)
     {   
-        $this->attributes['name'] = $value;
+        $this->attributes['title'] = $value;
         $this->attributes['slug'] = str($value)->slug();
     }
+
+    /* Relations */
+
+    public function subcategories()
+    {
+        return $this->hasMany(Subcategory::class);
+    }
+
 
 
 }

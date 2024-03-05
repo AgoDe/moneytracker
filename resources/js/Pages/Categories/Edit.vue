@@ -14,7 +14,7 @@ const props = defineProps({
 
 const form = useForm({
     id: props.category.id,
-    name: props.category.name,
+    title: props.category.title,
     color: props.category.color ?? '#ffffff',
     icon: props.category.icon,
     monthly_budget: props.category.monthly_budget,
@@ -30,7 +30,7 @@ const submit = () => {
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Modifica Categoria - {{ form.name }}</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Modifica Categoria - {{ form.title }}</h2>
         </template>
 
         <div class="container mt-4 md:mt-12 px-4 md:px-12 lg:px-24 xl:px-56 ">

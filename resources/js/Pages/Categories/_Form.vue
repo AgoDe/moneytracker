@@ -17,19 +17,19 @@ defineProps({
     <div>
 
         <div>
-            <InputLabel for="name" value="Nome" />
+            <InputLabel for="title" value="Nome" />
         
             <TextInput
-                id="name"
+                id="title"
                 type="text"
                 class="mt-1 block w-full"
-                v-model="form.name"
+                v-model="form.title"
                 required
                 autofocus
-                autocomplete="name"
+                autocomplete="title"
             />
         
-            <InputError class="mt-2" :message="form.errors.name" />
+            <InputError class="mt-2" :message="form.errors.title" />
         </div>
         
         <div class="mt-4">
@@ -45,31 +45,7 @@ defineProps({
             <InputError class="mt-2" :message="form.errors.color" />
         </div>
         
-        <div class="mt-4">
-            <InputLabel for="icon" value="Icona" />
         
-            <TextInput
-                id="icon"
-                type="text"
-                class="mt-1 block w-full"
-                v-model="form.icon"
-            />
-        
-            <InputError class="mt-2" :message="form.errors.icon" />
-        </div>
-        
-        <div class="mt-4">
-            <InputLabel for="monthly_budget" value="Budget mensile" />
-        
-            <TextInput
-                id="monthly_budget"
-                type="number"
-                class="mt-1 block w-full"
-                v-model="form.monthly_budget"
-            />
-        
-            <InputError class="mt-2" :message="form.errors.monthly_budget" />
-        </div>
     </div>
 
 </template>
